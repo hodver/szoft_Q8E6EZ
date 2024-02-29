@@ -16,9 +16,9 @@ namespace VillogoGomb
             {
                 for (int oszlop = 0; oszlop < 10; oszlop++)
                 {
-                    VillogoGomb b = new VillogoGomb();
-                    b.Height = méret;
-                    b.Width = méret;
+                    SzinezodoGomb b = new SzinezodoGomb();
+                    //b.Height = méret;
+                    //b.Width = méret;
                     b.Left = oszlop * méret;
                     b.Top = sor * méret;
                     b.Text = ((sor + 1) * (oszlop + 1)).ToString();
