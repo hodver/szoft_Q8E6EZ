@@ -2,7 +2,7 @@ namespace VillogoGomb
 {
     public partial class Form1 : Form
     {
-        int méret = 40;
+        //int méret = 40;  
         public Form1()
         {
             InitializeComponent();
@@ -16,12 +16,12 @@ namespace VillogoGomb
             {
                 for (int oszlop = 0; oszlop < 10; oszlop++)
                 {
-                    SzinezodoGomb b = new SzinezodoGomb();
-                    //b.Height = méret;
-                    //b.Width = méret;
-                    b.Left = oszlop * méret;
-                    b.Top = sor * méret;
-                    b.Text = ((sor + 1) * (oszlop + 1)).ToString();
+                    SzamoloGomb b = new SzamoloGomb();
+                    b.Height = 20;
+                    b.Width = 20;
+                    b.Left = oszlop * 20;
+                    b.Top = sor * 20;
+                    //b.Text = ((sor + 1) * (oszlop + 1)).ToString();
                     Controls.Add(b);
                 }
             }

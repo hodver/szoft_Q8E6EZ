@@ -13,13 +13,9 @@ namespace VillogoGomb
             Height = 20;
             Width = 20;
             Click += SzinezodoGomb_Click;
-            DoubleClick += SzinezodoGomb_DoubleClick;
+
         }
 
-        private void SzinezodoGomb_DoubleClick(object? sender, EventArgs e)
-        {
-            BackColor = SystemColors.ButtonFace;
-        }
 
         private void SzinezodoGomb_Click(object? sender, EventArgs e)
         {
