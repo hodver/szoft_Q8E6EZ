@@ -29,19 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            kígyóElem1 = new KígyóElem();
             timer1 = new System.Windows.Forms.Timer(components);
-            ((System.ComponentModel.ISupportInitialize)kígyóElem1).BeginInit();
             SuspendLayout();
-            // 
-            // kígyóElem1
-            // 
-            kígyóElem1.BackColor = Color.Fuchsia;
-            kígyóElem1.Location = new Point(121, 92);
-            kígyóElem1.Name = "kígyóElem1";
-            kígyóElem1.Size = new Size(20, 20);
-            kígyóElem1.TabIndex = 0;
-            kígyóElem1.TabStop = false;
             // 
             // timer1
             // 
@@ -54,18 +43,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(kígyóElem1);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             KeyDown += Form1_KeyDown;
-            ((System.ComponentModel.ISupportInitialize)kígyóElem1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private KígyóElem kígyóElem1;
         private System.Windows.Forms.Timer timer1;
     }
 }
