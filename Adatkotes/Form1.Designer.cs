@@ -28,21 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             dataGridView1 = new DataGridView();
+            nameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            populationDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            areaInSquareKmDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            countryDataBindingSource = new BindingSource(components);
             megnyitas = new Button();
             torles = new Button();
             szerkesztes = new Button();
+            mentes = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)countryDataBindingSource).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nameDataGridViewTextBoxColumn, populationDataGridViewTextBoxColumn, areaInSquareKmDataGridViewTextBoxColumn });
+            dataGridView1.DataSource = countryDataBindingSource;
             dataGridView1.Location = new Point(28, 65);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(739, 349);
             dataGridView1.TabIndex = 0;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // populationDataGridViewTextBoxColumn
+            // 
+            populationDataGridViewTextBoxColumn.DataPropertyName = "Population";
+            populationDataGridViewTextBoxColumn.HeaderText = "Population";
+            populationDataGridViewTextBoxColumn.Name = "populationDataGridViewTextBoxColumn";
+            // 
+            // areaInSquareKmDataGridViewTextBoxColumn
+            // 
+            areaInSquareKmDataGridViewTextBoxColumn.DataPropertyName = "AreaInSquareKm";
+            areaInSquareKmDataGridViewTextBoxColumn.HeaderText = "AreaInSquareKm";
+            areaInSquareKmDataGridViewTextBoxColumn.Name = "areaInSquareKmDataGridViewTextBoxColumn";
+            // 
+            // countryDataBindingSource
+            // 
+            countryDataBindingSource.DataSource = typeof(CountryData);
             // 
             // megnyitas
             // 
@@ -62,6 +94,7 @@
             torles.TabIndex = 2;
             torles.Text = "Törlés";
             torles.UseVisualStyleBackColor = true;
+            torles.Click += torles_Click;
             // 
             // szerkesztes
             // 
@@ -71,12 +104,24 @@
             szerkesztes.TabIndex = 3;
             szerkesztes.Text = "Szerkesztés";
             szerkesztes.UseVisualStyleBackColor = true;
+            szerkesztes.Click += szerkesztes_Click;
+            // 
+            // mentes
+            // 
+            mentes.Location = new Point(596, 28);
+            mentes.Name = "mentes";
+            mentes.Size = new Size(75, 23);
+            mentes.TabIndex = 4;
+            mentes.Text = "Mentés";
+            mentes.UseVisualStyleBackColor = true;
+            mentes.Click += mentes_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(mentes);
             Controls.Add(szerkesztes);
             Controls.Add(torles);
             Controls.Add(megnyitas);
@@ -85,6 +130,7 @@
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)countryDataBindingSource).EndInit();
             ResumeLayout(false);
         }
 
@@ -94,5 +140,10 @@
         private Button megnyitas;
         private Button torles;
         private Button szerkesztes;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn populationDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn areaInSquareKmDataGridViewTextBoxColumn;
+        private BindingSource countryDataBindingSource;
+        private Button mentes;
     }
 }

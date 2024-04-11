@@ -1,8 +1,10 @@
-﻿using System;
+﻿using CsvHelper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +14,16 @@ namespace Adatkotes
 {
     public partial class FormCountryEdit : Form
     {
+        public CountryData CountryData;
         public FormCountryEdit()
         {
             InitializeComponent();
         }
+
+        private void FormCountryEdit_Load(object sender, EventArgs e)
+        {
+            bindingSource1.DataSource = CountryData;
+        }
+
     }
 }
