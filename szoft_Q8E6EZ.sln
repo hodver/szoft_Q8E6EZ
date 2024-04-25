@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HajósTeszt", "HajósTeszt\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snake", "Snake\Snake.csproj", "{342EC277-9A11-4C90-A902-E242D118581F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adatkotes", "Adatkotes\Adatkotes.csproj", "{B8302C17-6CA7-4365-A9A4-75476C206CF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adatkotes", "Adatkotes\Adatkotes.csproj", "{B8302C17-6CA7-4365-A9A4-75476C206CF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemotelDbTest", "RemotelDbTest\RemotelDbTest.csproj", "{96B9E91A-99C1-4D9E-B435-F45F65605BD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{B8302C17-6CA7-4365-A9A4-75476C206CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8302C17-6CA7-4365-A9A4-75476C206CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8302C17-6CA7-4365-A9A4-75476C206CF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B9E91A-99C1-4D9E-B435-F45F65605BD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B9E91A-99C1-4D9E-B435-F45F65605BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B9E91A-99C1-4D9E-B435-F45F65605BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B9E91A-99C1-4D9E-B435-F45F65605BD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
