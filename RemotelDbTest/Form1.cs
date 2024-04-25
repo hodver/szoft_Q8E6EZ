@@ -1,3 +1,5 @@
+using RemotelDbTest.Models;
+
 namespace RemotelDbTest
 {
     public partial class Form1 : Form
@@ -22,8 +24,16 @@ namespace RemotelDbTest
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.InnerException.Message);
+                MessageBox.Show(ex.Message);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var eredmény = from x in studentContext.Students
+                           where x.Name.StartsWith(textBox1.Text) 
+                           select x;
+            dataGridView1.DataSource = eredmény.ToList();
         }
     }
 }
